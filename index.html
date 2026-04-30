@@ -1,28 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" name="google-site-verification" content="aE3lX4DKkySSDjtWbAv8B_dj7-_ppCTZnDmUW3k-92w" />
-  <title>Test Search Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="aE3lX4DKkySSDjtWbAv8B_dj7-_ppCTZnDmUW3k-92w" />
+  <title>台灣機車環島指南</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      margin: 0;
+      color: #1f2937;
+      background: #f8fafc;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+    .lead {
+      margin: 0 0 20px;
+      color: #475569;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .tab-btn {
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .tab-btn.active {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+    .panel {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .panel.active {
+      display: block;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .page-links {
+      margin-top: 18px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .page-links h2 {
+      margin: 0 0 10px;
+    }
+    .page-links a {
+      color: #1d4ed8;
+      text-decoration: none;
+      margin-right: 12px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
 <body>
+<main>
+  <h1>台灣機車環島指南</h1>
+  <p class="lead">
+    本頁整理機車環島常見需求，並依照類別分頁，方便快速查閱規劃重點。
+  </p>
 
-<h1>Vertex AI Search 測試網站</h1>
+  <div class="tabs" role="tablist" aria-label="環島內容分類">
+    <button class="tab-btn active" role="tab" aria-selected="true" data-tab="route">路線規劃</button>
+    <button class="tab-btn" role="tab" aria-selected="false" data-tab="prep">行前準備</button>
+    <button class="tab-btn" role="tab" aria-selected="false" data-tab="spots">景點推薦</button>
+    <button class="tab-btn" role="tab" aria-selected="false" data-tab="safety">安全與法規</button>
+    <button class="tab-btn" role="tab" aria-selected="false" data-tab="budget">預算估算</button>
+  </div>
 
-<p>
-Vertex AI Search 是一個由 Google 提供的搜尋服務，
-可以對網站內容進行索引並產生摘要（summary）。
-</p>
+  <section class="panel active" data-panel="route" role="tabpanel">
+    <h2>路線規劃</h2>
+    <ul>
+      <li>建議天數：7 到 10 天，較能平衡移動距離與休息。</li>
+      <li>方向選擇：順時針多為西部平原熱身，逆時針可先挑戰東部長距離。</li>
+      <li>每日里程：建議 150 到 250 公里，山線或雨天則下修。</li>
+      <li>必經主線：台1、台9、台11 可串起主要環島路段。</li>
+    </ul>
+  </section>
 
-<p>
-這個網站用來測試 search summary 功能，
-內容包含清楚的段落與完整句子，
-方便系統進行 extractive answers 與摘要生成。
-</p>
+  <section class="panel" data-panel="prep" role="tabpanel">
+    <h2>行前準備</h2>
+    <ul>
+      <li>車況檢查：輪胎胎紋與胎壓、煞車皮、燈具、機油、電瓶。</li>
+      <li>證件文件：身分證、駕照、行照、保險資訊與緊急聯絡方式。</li>
+      <li>裝備建議：全罩安全帽、防摔手套、兩件式雨衣、防曬袖套。</li>
+      <li>導航工具：手機支架、離線地圖、行動電源與充電線。</li>
+    </ul>
+  </section>
 
-<p>
-使用者可以透過搜尋關鍵字，
-取得相關文件的摘要資訊。
-</p>
+  <section class="panel" data-panel="spots" role="tabpanel">
+    <h2>景點推薦</h2>
+    <ul>
+      <li>北部：北海岸、九份山城、宜蘭濱海公路。</li>
+      <li>東部：花蓮七星潭、台11海岸線、三仙台。</li>
+      <li>南部：墾丁鵝鑾鼻、關山夕照、台26沿岸。</li>
+      <li>中部：日月潭、清境山區、高美濕地周邊。</li>
+    </ul>
+  </section>
 
+  <section class="panel" data-panel="safety" role="tabpanel">
+    <h2>安全與法規</h2>
+    <ul>
+      <li>山區常有午後陣雨與落石，需保留更多煞車距離。</li>
+      <li>夜騎視線差，建議在日落前抵達住宿點。</li>
+      <li>遵守速限、雙黃線、禁行機車與測速規定。</li>
+      <li>長途每 60 到 90 分鐘休息一次，避免疲勞騎乘。</li>
+    </ul>
+  </section>
+
+  <section class="panel" data-panel="budget" role="tabpanel">
+    <h2>預算估算</h2>
+    <ul>
+      <li>油資：視車種而定，環島一圈常見約新台幣 1,500 到 3,000 元。</li>
+      <li>住宿：背包床位約 600 起，商旅常見每晚 1,200 到 2,500 元。</li>
+      <li>餐飲：每日約 300 到 700 元可涵蓋三餐與補給。</li>
+      <li>預備金：建議抓 10% 到 15% 做維修與天候備案。</li>
+    </ul>
+  </section>
+
+  <section class="page-links" aria-label="縣市景點分頁">
+    <h2>縣市景點分頁</h2>
+    <a href="north.html">北部縣市景點</a>
+    <a href="central.html">中部縣市景點</a>
+    <a href="south.html">南部縣市景點</a>
+    <a href="east.html">東部縣市景點</a>
+  </section>
+</main>
+
+<script>
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const panels = document.querySelectorAll(".panel");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.tab;
+
+      tabButtons.forEach((btn) => {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-selected", "false");
+      });
+      button.classList.add("active");
+      button.setAttribute("aria-selected", "true");
+
+      panels.forEach((panel) => {
+        panel.classList.toggle("active", panel.dataset.panel === target);
+      });
+    });
+  });
+</script>
 </body>
 </html>
