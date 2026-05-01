@@ -18,4 +18,22 @@
   <url>
     <loc>https://daiyuwu.github.io/MyTestPage/east.html</loc>
   </url>
+  <url>
+    <loc>https://daiyuwu.github.io/MyTestPage/transit.html</loc>
+  </url>
+  <url>
+    <loc>https://daiyuwu.github.io/MyTestPage/transit-north.html</loc>
+  </url>
+  <url>
+    <loc>https://daiyuwu.github.io/MyTestPage/transit-central.html</loc>
+  </url>
+  <url>
+    <loc>https://daiyuwu.github.io/MyTestPage/transit-south.html</loc>
+  </url>
+  <url>
+    <loc>https://daiyuwu.github.io/MyTestPage/transit-east.html</loc>
+  </url>
+  <url>
+    <loc>https://daiyuwu.github.io/MyTestPage/transit-tips.html</loc>
+  </url>
 </urlset>
